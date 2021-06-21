@@ -8,6 +8,10 @@
 	<select id="list" parameterType="String" resultType="com.ict.db.VO">
 		select * from shop_t where category = #{category}
 	</select>	
+	
+	<select id="onelist" parameterType="String" resultType="com.ict.db.VO">
+		select * from shop_t where idx = #{idx}
+	</select>
 </mapper>
 
 

@@ -18,6 +18,13 @@ public class DAO {
 		list = getSession().selectList("list", category);
 		return list;
 	}
+	
+	// 상세보기
+	public static VO getOneList(String idx) {
+		VO vo = null;
+		vo = getSession().selectOne("onelist", idx);
+		return vo;
+	}
 }
 
 

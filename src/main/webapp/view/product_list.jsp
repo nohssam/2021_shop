@@ -48,7 +48,7 @@ table, th, td {
 						<tr align="center">
 							<td>${k.p_num }</td>
 							<td><img src="/images/${k.p_image_s}" style="width: 150px;"></td>
-							<td><a>${k.p_name}</a></td>
+							<td><a href="${pageContext.request.contextPath}/MyController?cmd=onelist&idx=${k.idx}">${k.p_name}</a></td>
 							<td>할인가 : <br><fmt:formatNumber value="${k.p_saleprice }" pattern="#,###" /> 원<br>
 							<font color="red">(${k.getPercent()}%)</font></td>
 							<td>시중 가격 : <br><fmt:formatNumber value="${k.p_price}" pattern="#,###" />원</td>
