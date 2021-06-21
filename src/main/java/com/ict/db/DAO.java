@@ -25,6 +25,13 @@ public class DAO {
 		vo = getSession().selectOne("onelist", idx);
 		return vo;
 	}
+	
+	// 로그인 
+	public static MVO getLogIn(MVO m_vo) {
+		MVO mvo = null;
+		mvo = getSession().selectOne("login", m_vo);
+		return mvo;
+	}
 }
 
 

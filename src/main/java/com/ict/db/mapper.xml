@@ -12,6 +12,10 @@
 	<select id="onelist" parameterType="String" resultType="com.ict.db.VO">
 		select * from shop_t where idx = #{idx}
 	</select>
+	
+	<select id="login" parameterType="com.ict.db.MVO" resultType="com.ict.db.MVO">
+		select * from members where id = #{id} and pw=#{pw}
+	</select>
 </mapper>
 
 
