@@ -20,7 +20,8 @@ input{padding: 8px;}
 </style>
 <script type="text/javascript">
 	function product_add(f) {
-				
+		f.action="/MyController?cmd=product_add";
+		f.submit();
 	}
 </script>
 </head>
@@ -29,16 +30,16 @@ input{padding: 8px;}
 	<%@ include file="top.jsp"%>
 	<div>
 		<h2>상품 등록</h2>
-		<form method="post" enctype="multipart/form-data"  onsubmit="product_add(this.form)">
+		<form method="post" enctype="multipart/form-data" >
 			<table>
 				<tbody>
 					<tr>
 						<th class="bg">분류</th>
-						<td>
-							<input type="radio" name="category" value="com001">컴퓨터
-							<input type="radio" name="category" value="ele002">가전제품
-							<input type="radio" name="category" value="sp003">스포츠
-						</td>
+							<td>
+								<input type="radio" name="category" value="com001">컴퓨터
+								<input type="radio" name="category" value="ele002">가전제품
+								<input type="radio" name="category" value="sp003">스포츠
+							</td>
 					</tr>
 					<tr>
 						<th class="bg">제품번호</th>
@@ -77,7 +78,7 @@ input{padding: 8px;}
 				</tbody>
 				<tfoot>
 					<tr>
-						<td colspan="2"><input type="submit" value="상품등록"></td>
+						<td colspan="2"><input type="button" value="상품등록" onclick="product_add(this.form)"></td>
 					</tr>
 				</tfoot>
 			</table>

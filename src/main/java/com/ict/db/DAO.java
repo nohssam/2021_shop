@@ -32,6 +32,17 @@ public class DAO {
 		mvo = getSession().selectOne("login", m_vo);
 		return mvo;
 	}
+	
+	// 상품등록
+	public static int getProductInsert(VO vo) {
+		int result = 0 ;
+		try {
+			result = getSession().insert("product_add", vo);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return result;
+	}
 }
 
 
